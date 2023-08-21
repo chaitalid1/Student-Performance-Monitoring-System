@@ -1,0 +1,104 @@
+<div class="modal-overlay">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modalBox">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title">Add Student</h1>
+            <button type="button" class="close" aria-label="Close" (click)="close()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- <h2>Add Student</h2> -->
+            <form (submit)="createSubject(subjectForm.value)" [formGroup]="subjectForm" class="add-student-form">
+            
+                <table>
+                  <tr>
+                    <legend>Subject Details</legend>
+                  </tr>
+  
+                  <tr>
+          
+                      <td>
+                        <label>
+                          Course Name:
+                        </label>
+                      </td>
+                      <td>
+                        <input type="text" formControlName="courseName" name="courseName" required>
+                      </td>
+                      <td>
+                        <label>
+                          Course Code:
+                        </label>
+                      </td>
+                      <td>
+                        <input type="text" formControlName="courseCode" name="courseCode" required>
+                      </td>
+                      <td>
+                        <label>
+                          Credits:
+                        </label>
+                      </td>
+                      <td>
+                        <input type="text" formControlName="credits" name="credits" required>
+                      </td>
+                    
+                  </tr>
+  
+                  <tr>
+          
+                    <td>
+                      <label>
+                        Department:
+                      </label>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="department" name="department" required>
+                    </td>
+                    <td>
+                      <label>
+                        Semester:
+                      </label>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="semester" name="semester" required>
+                    </td>
+                    <td>
+                      <label>
+                        Description:
+                      </label>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="description" name="description" required>
+                    </td>
+                    
+                  
+                </tr>
+  
+                <tr>
+          
+                  <td>
+                    <label>
+                      Staff:
+                    </label>
+                  </td>
+                  <td>
+                    <input type="text" formControlName="staff" name="staff" required>
+                  </td>
+  
+                </tr>
+  
+                  
+                        
+                </table>
+  
+              <button type="submit" class="save-button">Save</button>
+            </form>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    

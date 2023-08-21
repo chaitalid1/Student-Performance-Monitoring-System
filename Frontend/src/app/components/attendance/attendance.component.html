@@ -1,0 +1,91 @@
+
+
+
+
+
+
+ <div class="dashboard-container">
+    <div class="sidebar">
+      <div class="logo-section">
+        <img src="./assets/logo.png" alt="Logo" width="100%" height="170px">
+      </div>
+      <ul class="navigation-menu">
+        
+        <li><a href="dashboard">Dashboard</a></li>
+        <li><a href="department">Department</a></li>
+        <li><a href="staff">Staff</a></li>
+        <li><a href="subjects">Subjects</a></li>
+        <li><a href="semester">Semester</a></li>
+        <li><a href="student">Student</a></li>
+        <li><a href="attendance">Attendance</a></li>
+        <li><a href="marks">Marks</a></li>
+        <li><a href="reports">Reports</a></li>
+      </ul>
+    </div>
+    <div class="content">
+        <div class="top-bar">
+            <button (click)="navBack()" class="update-button">Back</button>
+        </div>
+        
+        
+
+        <div>
+          <h2>Attendance for {{ subject }}</h2>
+          <table class="add-student-form">
+
+            <tr>
+              <td>
+                  <label for="subject">Subject:</label>
+                  
+              </td>
+              <td>
+                <input type="text" id="subject" [(ngModel)]="subject">
+              </td>
+              <td>
+                <label for="lectureno">Lecture no.:</label>
+                
+            </td>
+            <td>
+              <input type="lectureno" id="lectureNo" [(ngModel)]="lectureNo">
+            </td>
+
+            </tr>
+
+          </table>
+
+        </div>
+          
+        <h2>Attendance</h2>
+          <table class="table2">
+            <thead>
+              <tr>
+                <th>Student ID</th>
+                <th>USN No.</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Mark Attendance</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let student of students, let i = index">
+                <td>{{ student.studentId }}</td>
+                <td>{{ student.usnno }}</td>
+                <td>{{ student.firstName }}</td>
+                <td>{{ student.lastName }}</td>
+                <td>
+                  <button (click)="markAttendance(student.studentId, true, subject, lectureNo, i)"  class="update-button">Present</button>
+                  <button (click)="markAttendance(student.studentId, false, subject, lectureNo, i)" class="delete-button">Absent</button>
+                </td>
+                <td ><input type="text" [(ngModel)]="messages[i]" [hidden]="!showingMessages[i]"></td>
+              </tr>
+            </tbody>
+          </table>
+        
+    </div>
+  </div>
+
+  <!-- <div>
+    <h2>Total Attendance Count: {{ totalAttendanceCount }}</h2>
+    <h2>Total Present Count: {{ totalPresentCount }}</h2>
+  </div> -->

@@ -1,0 +1,142 @@
+
+
+
+
+
+
+<div class="modal-overlay">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modalBox">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title">Add Student</h1>
+            <button type="button" class="close" aria-label="Close" (click)="close()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- <h2>Add Student</h2> -->
+            <h2>Update Staff</h2>
+          
+            <!-- <h2>Update Department</h2> -->
+  <form (submit)="updateStaff(StaffForm.value)" [formGroup]="StaffForm" class="add-student-form">
+    
+      <table>
+        <tr>
+          <legend>Staff Details</legend>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              Staff ID:
+            </label>
+          </td>
+          <td>
+            <input type="number" formControlName="staffId" name="staffId" [value]="data.staffId" required >
+          </td>
+        </tr>
+          
+        <tr>
+
+            <td>
+              <label>
+                Name:
+              </label>
+            </td>
+            <td>
+              <input type="text" formControlName="name" name="name" [value]="data.name" required >
+            </td>
+            <td>
+              <label>
+                Email:
+              </label>
+            </td>
+            <td>
+              <input type="text" formControlName="email" name="email" [value]="data.email" required>
+            </td>
+            <td>
+              <label>
+                Phone:
+              </label>
+            </td>
+            <td>
+              <input type="text" formControlName="phone" name="phone" [value]="data.phone" required>
+            </td>
+          
+        </tr>
+
+        <tr>
+
+          <td>
+            <label>
+              DOB:
+            </label>
+          </td>
+          <td>
+            <input type="number" formControlName="dob" name="dob" [value]="data.dob" required>
+          </td>
+          <td>
+            <label>
+              Designation:
+            </label>
+          </td>
+          <td>
+            <input type="text" formControlName="designation" name="designation" [value]="data.designation" required>
+          </td>
+          <td>
+            <label>
+              Date of Joining:
+            </label>
+          </td>
+          <td>
+            <input type="text" formControlName="dateOfJoining" name="dateOfJoining" [value]="data.dateOfJoining" required>
+          </td>
+          
+        
+      </tr>
+
+      <tr>
+
+        <td>
+          <label>
+            Department:
+          </label>
+        </td>
+        <td>
+          <input type="number" formControlName="department" name="department" [value]="data.department" required>
+        </td>
+        <td>
+          <label>
+            Experience:
+          </label>
+        </td>
+        <td>
+          <input type="text" formControlName="experience" name="experience" [value]="data.experience" required>
+        </td>
+        <!-- <td>
+          <label>
+            Date of Joining:
+          </label>
+        </td>
+        <td>
+          <input type="text" formControlName="dateOfJoining" name="dateOfJoining" [value]="data.dateOfJoining" required>
+        </td> -->
+        
+      
+    </tr>
+
+
+        
+              
+      </table>
+
+    <button type="submit" class="save-button">Save</button>
+
+  </form>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    

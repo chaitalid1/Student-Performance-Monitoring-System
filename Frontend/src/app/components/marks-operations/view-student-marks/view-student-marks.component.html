@@ -1,0 +1,53 @@
+<div class="modal-overlay">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modalBox">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- <h1 class="modal-title">Student Marks</h1> -->
+            <button type="button" class="close" aria-label="Close" (click)="close()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div>
+                <form class="add-student-form">
+                          
+                  <table class="view-student-marks-table">
+            
+                    <tbody>
+                        <tr>
+                            <!-- <td><b>USN No :  </b> {{ data?.usnno }}</td> -->
+                            <!-- <td><b>Name :  </b> {{ data.studentName}}</td> -->
+                            <!-- <td><b>Last Name :  </b> {{ data.lastName}}</td> -->
+
+                        </tr>
+                    </tbody>
+                  </table>
+
+                  <legend><b>Marks</b></legend>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Subject Name</th>
+                        <th>Marks</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr  *ngFor="let d of data">
+                            <td>{{ d.subjectName }} : </td>
+                            <td> {{ d.marks }}</td>
+                            
+                        </tr>
+                    </tbody>
+                  </table>
+
+            
+              </form>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    

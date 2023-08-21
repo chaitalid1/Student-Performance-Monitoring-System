@@ -1,0 +1,189 @@
+<div class="modal-overlay">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modalBox">
+      <div class="modal-content">
+        <div class="modal-header">
+        <h1 class="modal-title">Update Student Details</h1>
+        <button type="button" class="close" aria-label="Close" (click)="close()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        <!-- <h2>Add Student</h2> -->
+        <form  (submit)="updateStudent(studentForm.value)" [formGroup]="studentForm" class="add-student-form">
+            
+            <table>
+                <tr>
+                <legend>Student Details</legend>
+                </tr>
+
+                <tr>
+        
+                    <td>
+                    <label>
+                        <b>First Name:</b>
+                    </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="firstName" name="firstName" [value]="data.firstName" required>
+                    </td>
+                    <td>
+                    <label>
+                        <b>Middle Name:</b>
+                    </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="middleName" name="middleName" [value]="data.middleName" required>
+                    </td>
+                    <td>
+                    <label>
+                        <b>Last Name:</b>
+                    </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="lastName" name="lastName" [value]="data.lastName" required>
+                    </td>
+                
+                </tr>
+
+                <tr>
+                
+                    <td>
+                    <label>
+                        <b>USN No:</b>
+                        
+                    </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="usnno" name="usnno" [value]="data.usnno" required>
+                    </td>
+                    <td>
+                    <label>
+                        <b>Phone:</b>
+                    </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="phone" name="phone" [value]="data.phone" required>
+                    </td>
+                    <td>
+                    <label>
+                        <b>Email:</b>
+                    </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="email" name="email" [value]="data.email" required>
+                    </td>
+                
+                </tr>
+
+                <tr>
+                
+                    <td>
+                    <label >
+                        <b>Gender:</b>
+                    </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="gender" name="gender" [value]="data.gender" required>
+                    </td>
+                    <td>
+                    <label>
+                        <b>Year Of Admission:</b>
+                    </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="yearOfAdmission" name="yearOfAdmission" [value]="data.yearOfAdmission" required>
+                    </td>
+                    <td>
+                    <label>
+                        <b>DOB:</b>
+                    </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="dob" name="DOB" [value]="data.DOB" required>
+                    </td>
+                    
+                
+                </tr> 
+
+
+                <tr>
+                    <td>
+                        <label>
+                        <b>Address:</b>
+                        
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="address" name="address" [value]="data.address" required>
+                    </td>
+                    <td>
+                        <label>
+                        <b>Teacher Guardian:</b>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="teacherGuardian" name="teacherGuardian" [value]="data.teacherGuardian" required>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                <legend><b>Parent Details</b></legend>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>
+                            <b>Father's Name:</b>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="fatherName" name="fatherName" [value]="data.fatherName" required>
+                    </td>
+                    <td>
+                        <label>
+                            <b>Mother's Name:</b>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="motherName" name="motherName" [value]="data.motherName" required>
+                    </td>
+                    <td>
+                        <label >
+                            <b>Parent Email:</b>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="parentEmail" name="parentEmail" [value]="data.parentEmail" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label >
+                            <b>Father's Phone no.:</b>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="fatherPhone" name="fatherPhone" [value]="data.fatherPhone" required>
+                    </td>
+                    <td>
+                        <label >
+                            <b>Mother's Phone no.:</b>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" formControlName="motherPhone" name="motherPhone" [value]="data.motherPhone" required>
+                    </td>
+                </tr>
+            </table>
+
+            <button type="submit" class="save-button">Update</button>
+        </form>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            

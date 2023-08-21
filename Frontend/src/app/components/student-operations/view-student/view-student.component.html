@@ -1,0 +1,196 @@
+<div class="modal-overlay">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modalBox">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title">Full Student Details</h1>
+            <button type="button" class="close" aria-label="Close" (click)="close()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- <h2>Add Student</h2> -->
+            <form class="add-student-form">
+              
+                <table>
+                  <tr>
+                    <legend>Student Details</legend>
+                  </tr>
+  
+                  <tr>
+          
+                      <td>
+                        <label>
+                          <b>First Name:</b>
+                        </label>
+                      </td>
+                      <td>
+                        {{ data.firstName }}
+                      </td>
+                      <td>
+                        <label>
+                          <b>Middle Name:</b>
+                        </label>
+                      </td>
+                      <td>
+                        {{ data.middleName }}
+                      </td>
+                      <td>
+                        <label>
+                          <b>Last Name:</b>
+                        </label>
+                      </td>
+                      <td>
+                        {{ data.lastName }}
+                      </td>
+                    
+                  </tr>
+  
+                  <tr>
+                    
+                      <td>
+                        <label>
+                          <b>USN No:</b>
+                          
+                        </label>
+                      </td>
+                      <td>
+                        {{ data.usnno }}
+                      </td>
+                      <td>
+                        <label>
+                          <b>Phone:</b>
+                        </label>
+                      </td>
+                      <td>
+                          {{ data.phone }}
+                      </td>
+                      <td>
+                        <label>
+                          <b>Email:</b>
+                        </label>
+                      </td>
+                      <td>
+                        {{ data.email }}
+                      </td>
+                    
+                  </tr>
+  
+                  <tr>
+                    
+                    <td>
+                      <label >
+                        <b>Gender:</b>
+                       
+                      </label>
+                    </td>
+                    <td>
+                       {{ data.gender }}
+                    </td>
+                    <td>
+                      <label>
+                        <b>Year Of Admission:</b>
+                        
+                      </label>
+                    </td>
+                    <td>
+                      {{ data.yearOfAdmission }}
+                    </td>
+                    <td>
+                        <label>
+                        <b>DOB:</b>
+                        
+                      </label>
+                    </td>
+                    <td>
+                      {{ data.dob }}
+                    </td>
+                      
+                    
+                  </tr> 
+              
+  
+                  <!-- <tr>
+                    <legend>Adress</legend>
+                  </tr> -->
+  
+                  <tr>
+                    <td>
+                      <label>
+                        <b>Address:</b>
+                        
+                      </label>
+                    </td>
+                    <td>
+                      {{ data.address }}
+                    </td>
+                    <td>
+                      <label>
+                        <b>Teacher Guardian:</b>
+                      </label>
+                    </td>
+                    <td>
+                       {{ data.teacherGuardian}}
+                    </td>
+                  
+                  <!-- <tr><td colspan="6"><hr></td></tr> -->
+                  
+                  <tr>
+                    <legend><b>Parent Details</b></legend>
+                  </tr>
+  
+                  <tr>
+                    <td>
+                      <label>
+                        <b>Father's Name:</b>
+                      </label>
+                    </td>
+                    <td>
+                      {{ data.fatherName }}
+                    </td>
+                    <td>
+                      <label>
+                        <b>Mother's Name:</b>
+                      </label>
+                    </td>
+                    <td>
+                      {{ data.motherName }}
+                    </td>
+                    <td>
+                      <label >
+                        <b>Parent Email:</b>
+                      </label>
+                    </td>
+                    <td>
+                        {{ data.parentEmail }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label >
+                        <b>Father's Phone no.:</b>
+                      </label>
+                    </td>
+                    <td>
+                      {{ data.fatherPhone }}
+                    </td>
+                    <td>
+                      <label >
+                        <b>Mother's Phone no.:</b>
+                      </label>
+                    </td>
+                    <td>
+                        {{ data.motherPhone }}
+                    </td>
+                  </tr>
+                </table>
+  
+              <!-- <button type="submit" class="save-button">Save</button> -->
+            </form>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    

@@ -1,0 +1,324 @@
+.dashboard-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    margin: 15px;
+    background-color: #a4d0ff;
+    padding: 20px;
+    border-radius: 20px;
+    color: black;
+  }
+  
+  .logo-section img {
+    width: 170px;
+    margin: 10px;
+    padding: 5px;
+    align-self: center;
+    border-radius: 20px;
+
+  }
+  
+  .navigation-menu {
+    list-style-type: none;
+    padding: 0;
+    font-size:large;
+  }
+  
+  .navigation-menu li {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #6f4fff;
+    height: 30px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .navigation-menu li :hover {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #a4d0ff;
+    height: 30px;
+    border-radius: 10px;
+    text-align: left;
+    color: #000000;
+  }
+  
+  .navigation-menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    margin: 15px;
+    background-color: #a4d0ff;
+    color: black;
+    border-radius: 20px;
+  }
+  
+  .top-navigation {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    font-size:large;
+  }
+  
+  .user-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .user-menu li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .user-menu li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .information-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .information-section p {
+    font-size: 16px;
+    color: #666;
+    font-size:large;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-student-button {
+    text-align: right;
+  }
+  
+  .back-button {
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .update-button, .delete-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+  }
+  
+
+  .add-student-form{
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+
+  }
+
+  .detail1 {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  input {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 25px;
+    width: 200px;
+  }
+
+
+  legend{
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .detail2 {
+    padding: 5px 0px;
+    width: 350px;
+  }
+
+  .save-button{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  /* table, tr, td{
+    border: 1px solid black;
+  } */
+
+  .table2 {
+    margin-top: 20px;
+  }
+
+  .view-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  .add-student-button {
+    text-align: right;
+  }
+  
+  .back-button {
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .update-button, .delete-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+  }
+
+  .view-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  .add-student-form{
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+
+  }
+
+  .detail1 {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  input {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 25px;
+    width: 200px;
+  }
+
+
+  legend{
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .detail2 {
+    padding: 5px 0px;
+    width: 350px;
+  }
+
+  .save-button{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+  }
+
+  /* table, tr, td{
+    border: 1px solid black;
+  } */
+
+  .table2 {
+    margin-top: 20px;
+  }

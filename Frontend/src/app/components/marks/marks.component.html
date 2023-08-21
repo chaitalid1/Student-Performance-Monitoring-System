@@ -1,0 +1,122 @@
+<div class="dashboard-container">
+    <div class="sidebar">
+      <div class="logo-section">
+        <img src="./assets/logo.png" alt="Logo" width="100%" height="170px">
+      </div>
+      <ul class="navigation-menu">
+        
+        <li><a href="dashboard">Dashboard</a></li>
+        <li><a href="department">Department</a></li>
+        <li><a href="staff">Staff</a></li>
+        <li><a href="subjects">Subjects</a></li>
+        <li><a href="semester">Semester</a></li>
+        <li><a href="student">Student</a></li>
+        <li><a href="attendance">Attendance</a></li>
+        <li><a href="marks">Marks</a></li>
+        <li><a href="reports">Reports</a></li>
+      </ul>
+    </div>
+    <div class="content">
+        <div class="top-bar">
+          <button (click)="navBack()" class="update-button">Back</button>
+        </div>
+
+        <div class="headAndButton">
+          <h2>Marks Details</h2>
+          <button class="update-button" (click)="viewAllMarks()">View Complete Marks Details</button>
+        </div>
+
+        <div *ngIf ="showViewAllMarks">
+          <table>
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>Name</th>
+              <th>Subject Name</th>
+              <th>Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let d of marks1 , let i = index">
+              <td>{{ d.studentId }}</td>
+              <td>{{ d.studentName}}</td>
+              <td>{{ d.subjectName}}</td>
+              <td>{{ d.marks}}</td>
+
+            </tr>
+
+
+          </tbody>
+        </table>
+  
+        </div>
+
+        <div *ngIf="showMarks">
+      
+        
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>USN No.</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let student of students, let i = index">
+              <td>{{ student.studentId }}</td>
+              <td>{{ student.usnno }}</td>
+              <td>{{ student.firstName }}</td>
+              <td>{{ student.lastName }}</td>
+              <td>
+                <!-- <button class="update-button" (click)="viewMarks(student.studentId)">View Marks</button> -->
+                <button class="update-button" (click)="updateMarks(i)">Update Marks</button>
+
+
+                <div *ngIf="showUpdateMarksForm">
+                  <table class="insideTable" [hidden]="!showingMessages[i]">
+                    <tr *ngFor="let subject of subjects, let i = index">
+                      <td>{{ subject }} : </td>
+                      <td><input type="number" #markForInput id="marks[i]" [(ngModel)]="marks[i]" value=" "></td>
+                    </tr>
+                    <tr>
+                      <td><button class="save-button" (click)="saveMarks(student.studentId, subjects, marks, student.firstName, student.lastName, i ) "> Save </button></td>
+                    </tr>
+                  </table>
+                  
+                </div>
+
+
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+        
+    </div>
+  </div>
+
+
+
+              <!-- <tr *ngFor="let d of marks1 , let i = index">
+              <td>{{ d.studentId }}</td>
+              <td>{{ d.studentName}}</td>
+              <td *ngFor="let subject of subjects1">{{ d[subject] }}</td>
+              <td>{{ d.subjectName}}</td>
+              <td>{{ d.marks}}</td>
+
+            </tr> -->
+<!-- 
+            <tr *ngFor="let student of marks1 ">
+              <td>{{ student.studentId }}</td>
+              <td *ngFor="let subject of subjects">
+                <td *ngFor="let mark of student.items">
+                  <ng-container *ngIf="marks1.subjectName === subject.courseName">{{ mark.marks }}</ng-container>
+                </td>
+              </td>
+            </tr> -->

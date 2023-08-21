@@ -1,0 +1,239 @@
+<div class="dashboard-container">
+    <div class="sidebar">
+      <div class="logo-section">
+        <img src="./assets/logo.png" alt="Logo" width="100%" height="170px">
+      </div>
+      <ul class="navigation-menu">
+        
+        <li><a href="dashboard">Dashboard</a></li>
+        <li><a href="department">Department</a></li>
+        <li><a href="staff">Staff</a></li>
+        <li><a href="subjects">Subjects</a></li>
+        <li><a href="semester">Semester</a></li>
+        <li><a href="student">Student</a></li>
+        <li><a href="attendance">Attendance</a></li>
+        <li><a href="marks">Marks</a></li>
+        <li><a href="reports">Reports</a></li>
+      </ul>
+    </div>
+    <div class="content">
+        <div class="top-bar">
+            <button (click)="navBack()" class="update-button">Back</button>
+        </div>
+        
+        
+        
+        <div class="add-student-button">
+          <button (click)="showAddDepartmentForm()"  class="add-button">Add Department</button>
+        </div>
+
+        <div *ngIf="showAddDepartment">
+          
+          <h2>Add Department</h2>
+          <form (submit)="createDepartment(deptForm.value)" [formGroup]="deptForm" class="add-student-form">
+            
+              <table>
+                <tr>
+                  <legend>Department Details</legend>
+                </tr>
+
+                <tr>
+        
+                    <td>
+                      <label>
+                        HOD:
+                      </label>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="hod" name="hod" required>
+                    </td>
+                    <td>
+                      <label>
+                        Department Name:
+                      </label>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="deptName" name="deptName" required>
+                    </td>
+                    <td>
+                      <label>
+                        Email:
+                      </label>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="email" name="email" required>
+                    </td>
+                  
+                </tr>
+
+                <tr>
+        
+                  <td>
+                    <label>
+                      Staff Count:
+                    </label>
+                  </td>
+                  <td>
+                    <input type="text" formControlName="staffCount" name="staffCount" required>
+                    
+                  </td>
+                  <td>
+                    <label>
+                      Description:
+                    </label>
+                  </td>
+                  <td>
+                    <input type="text" formControlName="description" name="description" required>
+                  </td>
+                  <td>
+                    <label>
+                      Phone:
+                    </label>
+                  </td>
+                  <td>
+                    <input type="text" formControlName="phone" name="phone" required>
+                  </td>
+                  
+                
+              </tr>
+
+                
+                      
+              </table>
+
+            <button type="submit" class="save-button">Save</button>
+
+          </form>
+        </div>
+
+
+        
+        <div *ngIf="showUpdateDepartment">
+          
+          <h2>Update Department</h2>
+          <form (submit)="updateDepartment(deptFormU.value)" [formGroup]="deptFormU" class="add-student-form">
+            
+              <table>
+                <tr>
+                  <legend>Department Details</legend>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      Department ID:
+                    </label>
+                  </td>
+                  <td>
+                    <input type="number" formControlName="deptId" name="deptId" [value]="department.deptId" required >
+                  </td>
+                </tr>
+                  
+                <tr>
+        
+                    <td>
+                      <label>
+                        HOD:
+                      </label>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="hod" name="hod" [value]="department.hod" required >
+                    </td>
+                    <td>
+                      <label>
+                        Department Name:
+                      </label>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="deptName" name="deptName" [value]="department.deptName" required>
+                    </td>
+                    <td>
+                      <label>
+                        Email:
+                      </label>
+                    </td>
+                    <td>
+                      <input type="text" formControlName="email" name="email" [value]="department.email" required>
+                    </td>
+                  
+                </tr>
+
+                <tr>
+        
+                  <td>
+                    <label>
+                      Staff Count:
+                    </label>
+                  </td>
+                  <td>
+                    <input type="number" formControlName="staffCount" name="staffCount" [value]="department.staffCount" required>
+                  </td>
+                  <td>
+                    <label>
+                      Description:
+                    </label>
+                  </td>
+                  <td>
+                    <input type="text" formControlName="description" name="description" [value]="department.description" required>
+                  </td>
+                  <td>
+                    <label>
+                      Phone:
+                    </label>
+                  </td>
+                  <td>
+                    <input type="text" formControlName="phone" name="phone" [value]="department.phone" required>
+                  </td>
+                  
+                
+              </tr>
+
+                
+                      
+              </table>
+
+            <button type="submit" class="save-button">Save</button>
+
+          </form>
+        </div>
+
+
+
+      <div class="table2">
+        <h2>Department Details</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Department Name</th>
+              <th>HOD</th>
+              <th>Staff Count</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Decsription</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let d of departments">
+              <td>{{ d.deptId }}</td>
+              <td>{{ d.deptName}}</td>
+              <td>{{ d.hod }}</td>
+              <td><a href="staff">{{ d.staffCount }}</a>
+                
+                <!-- <a href="staff">View</a> -->
+              </td>
+              <td>{{ d.phone }}</td>
+              <td>{{ d.email }}</td>
+              <td>{{ d.description }}</td>
+
+              <td>
+                <button (click)="updateDetails(d.deptId,d)" class="update-button">Update</button>
+                <button (click)="deleteDetails(d.deptId)" class="delete-button">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

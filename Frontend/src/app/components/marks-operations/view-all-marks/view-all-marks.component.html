@@ -1,0 +1,77 @@
+<div class="modal-overlay">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modalBox">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title">Student Marks</h1>
+            <button type="button" class="close" aria-label="Close" (click)="close()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div>
+                <!-- <form class="add-student-form"> -->
+                          
+                  <table class="view-student-marks-table">
+                    <!-- <thead>
+                      <tr>
+                        <th rowspan="2">ID</th>
+                        <th rowspan="2">USN No.</th>
+                        <th rowspan="2">First Name</th>
+                        <th rowspan="2">Last Name</th>
+                        <th colspan="6">CAE-I</th>
+                        <th colspan="6">CAE-II</th>
+                        <th colspan="6">TAE</th>
+                      </tr>
+                      <tr>
+                        <th *ngFor="let subject of data">{{ subject }}</th>
+                        <th *ngFor="let subject of data">{{ subject }}</th>
+                        <th *ngFor="let subject of data">{{ subject }}</th>
+                      </tr>
+                    </thead>
+            
+                    <tbody>
+                        <tr *ngFor="let student of students, let i = index">
+                            <td>{{ student.studentId }}</td>
+                            <td>{{ student.usnno }}</td>
+                            <td>{{ student.firstName }}</td>
+                            <td>{{ student.lastName }}</td>
+                             <td *ngFor="let s of data">{{ s.subjectName }}: {{}}</td>
+
+                            
+                        </tr>
+            
+            
+                    </tbody> -->
+
+                    <thead>
+                      <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Subject Name</th>
+                        <th>Marks</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let d of data, let i = index">
+                        <td>{{ d.studentId }}</td>
+                        <td>{{ d.studentName}}</td>
+                        <td>{{ d.subjectName}}</td>
+                        <td>{{ d.marks}}</td>
+
+                      </tr>
+                    </tbody>
+            
+            
+                    
+                  </table>
+            
+              <!-- </form> -->
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    

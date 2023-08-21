@@ -1,0 +1,133 @@
+<div class="modal-overlay">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modalBox">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title">Full Staff Details</h1>
+            <button type="button" class="close" aria-label="Close" (click)="close()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- <h2>Add Student</h2> -->
+            <form class="add-student-form">
+              
+                <table>
+                  <tr>
+                    <legend>Staff Details</legend>
+                  </tr>
+  
+                  <tr>
+          
+                      <td>
+                        <label>
+                          <b>Staff Id:</b>
+                        </label>
+                      </td>
+                      <td>
+                        {{ data.staffId }}
+                      </td>
+                      <td>
+                        <label>
+                          <b>Name:</b>
+                        </label>
+                      </td>
+                      <td>
+                        {{ data.name }}
+                      </td>
+                      <td>
+                        <label>
+                          <b>Email:</b>
+                        </label>
+                      </td>
+                      <td>
+                        {{ data.email }}
+                      </td>
+                    
+                  </tr>
+  
+                  <tr>
+                    
+                      <td>
+                        <label>
+                          <b>Gender: </b>
+                          
+                        </label>
+                      </td>
+                      <td>
+                        {{ data.gender }}
+                      </td>
+                      <td>
+                        <label>
+                          <b>DOB:</b>
+                        </label>
+                      </td>
+                      <td>
+                          {{ data.dob }}
+                      </td>
+                      <td>
+                        <label>
+                          <b>Phone:</b>
+                        </label>
+                      </td>
+                      <td>
+                        {{ data.phone }}
+                      </td>
+                    
+                  </tr>
+  
+                  <tr>
+                    
+                    <td>
+                      <label >
+                        <b>Designation:</b>
+                       
+                      </label>
+                    </td>
+                    <td>
+                       {{ data.designation }}
+                    </td>
+                    <td>
+                      <label>
+                        <b>Date of Joining:</b>
+                        
+                      </label>
+                    </td>
+                    <td>
+                      {{ data.dateOfJoining }}
+                    </td>
+                    <td>
+                        <label>
+                        <b>Experience:</b>
+                        
+                      </label>
+                    </td>
+                    <td>
+                      {{ data.experience }}
+                    </td>
+                      
+                    
+                  </tr> 
+
+  
+                  <tr>
+                    <td>
+                      <label>
+                        <b>Department:</b>
+                        
+                      </label>
+                    </td>
+                    <td>
+                      {{ data.department }}
+                    </td>
+                   </tr>
+                </table>
+  
+            </form>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
